@@ -1,0 +1,49 @@
+header {
+    height: 5vh;
+}
+
+main {
+    max-width: 100vw;
+    height: 95vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#search-form-container {
+    border-bottom: 3px solid black;
+}
+
+#recent-searches-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#current-day {
+    border: 2px solid grey;
+    box-shadow: 0 7px 10px rgb(0 0 0 / 0.2);
+}
+
+#five-day-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3%;
+    overflow: auto;
+}
+
+#five-day-forecast h3 {
+    width: 100%;
+}
+
+.five-day-card {
+    background-color: lightgrey;
+    padding: 1.7rem;
+}
+
+.hide {
+    display: none;
+}

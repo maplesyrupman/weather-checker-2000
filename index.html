@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>WC2K</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-primary bg-gradient">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1 text-white">Weather Checker 2000</span>
+            </div>
+        </nav>
+    </header>
+    <main class='row p-4'>
+        <div id='search-container' class='col-2 border rounded p-4'>
+            <div id='search-form-container' class='p-2'>
+                <form id='search-form'>
+                    <label for='search-input' class='fs-5'>Search for a city:</label>
+                    <input id='search-input' type='text' />
+                    <button class='btn btn-primary'>Search</button>
+                </form>
+            </div>
+
+            <div id='recent-searches-container' class='p-2'>
+                <button class='btn btn-secondary'>Toronto</button>
+                <button class='btn btn-secondary'>Halifax</button>
+                <button class='btn btn-secondary'>Montreal</button>
+            </div>
+        </div>
+
+        <div id='result-contianer' class='col-10 p-5'>
+            <div id='current-day' class='row'>
+                <h3 id='cityHeading'>Toronto <span class='fs-5'>September 31, 2021</span></h3>
+                <p id='currentTemp'>Temp: 15 deg c</p>
+                <p id='curentWind'>Wind: 5km/h</p>
+                <p>Humidity: 28%</p>
+                <p>UV Index: 0.32</p>
+            </div>
+
+            <div id='five-day-forecast' class='pt-5'>
+                <h3 class='mb-4'>5-Day Forecast:</h3>
+                <div class='five-day-card'>
+                    <h5 class='5-day-date'>Monday</h5>
+                    <p class='5-day-info'>Temp: 15 deg c</p>
+                    <p class='5-day-info'>Wind: 7km/h</p>
+                    <p class='5-day-info'>Humidity: 19%</p>
+                </div>
+                <div class='five-day-card'>
+                    <h5 class='5-day-date'>Monday</h5>
+                    <p class='5-day-info'>Temp: 15 deg c</p>
+                    <p class='5-day-info'>Wind: 7km/h</p>
+                    <p class='5-day-info'>Humidity: 19%</p>
+                </div>
+                <div class='five-day-card'>
+                    <h5 class='5-day-date'>Monday</h5>
+                    <p class='5-day-info'>Temp: 15 deg c</p>
+                    <p class='5-day-info'>Wind: 7km/h</p>
+                    <p class='5-day-info'>Humidity: 19%</p>
+                </div>
+                <div class='five-day-card'>
+                    <h5 class='5-day-date'>Monday</h5>
+                    <p class='5-day-info'>Temp: 15 deg c</p>
+                    <p class='5-day-info'>Wind: 7km/h</p>
+                    <p class='5-day-info'>Humidity: 19%</p>
+                </div>
+                <div class='five-day-card'>
+                    <h5 class='5-day-date'>Monday</h5>
+                    <p class='5-day-info'>Temp: 15 deg c</p>
+                    <p class='5-day-info'>Wind: 7km/h</p>
+                    <p class='5-day-info'>Humidity: 19%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src='./script.js'></script>
+</body>
+
+</html>
