@@ -107,13 +107,6 @@ const getIconUrl = (iconId) => {
     return iconUrl;
 }
 
-
-searchBtn.addEventListener('click', e => {
-    e.preventDefault();
-    let city = document.getElementById('search-input').value;
-    getLatLong(city);
-})
-
 const getRecent = () => {
     return (localStorage.getItem('recentSearches')) ? 
             JSON.parse(localStorage.getItem('recentSearches')) : 
@@ -161,5 +154,12 @@ const createRecentButtons = () => {
         createRecentButton(recentSearches[i]);
     }
 }
+
+searchBtn.addEventListener('click', e => {
+    e.preventDefault();
+    let city = document.getElementById('search-input').value;
+    getLatLong(city);
+    document.getElementById('search-input').value = '';
+})
 
 createRecentButtons();
