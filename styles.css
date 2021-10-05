@@ -23,25 +23,43 @@ form {
     gap: 5px;
 }
 
-#current-day {
+.current-day {
     border: 2px solid grey;
     box-shadow: 0 7px 10px rgb(0 0 0 / 0.2);
 }
 
-#five-day-forecast {
+#current-uv {
+    padding: 3px 7px;
+    border-radius: 7px;
+    color: white;
+}
+
+.five-day-forecast {
     display: flex;
     flex-wrap: wrap;
     gap: 3%;
     overflow: auto;
 }
 
-#five-day-forecast h3 {
+.five-day-forecast h3 {
     width: 100%;
 }
 
 .five-day-card {
     background-color: lightgrey;
     padding: 1.7rem;
+}
+
+.weather-icon {
+    width: 50px;
+    object-fit: contain;
+}
+
+.error-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hide {

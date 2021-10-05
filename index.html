@@ -25,58 +25,68 @@
                 <form id='search-form'>
                     <label for='search-input' class='fs-5'>Search for a city:</label>
                     <input id='search-input' type='text' />
-                    <button class='btn btn-primary'>Search</button>
+                    <button id='searchBtn' class='btn btn-primary' type='button'>Search</button>
                 </form>
             </div>
 
-            <div id='recent-searches-container' class='p-2'>
-                <button class='btn btn-secondary'>Toronto</button>
-                <button class='btn btn-secondary'>Halifax</button>
-                <button class='btn btn-secondary'>Montreal</button>
-            </div>
+            <div id='recent-searches-container' class='p-2'></div>
         </div>
 
         <div id='result-contianer' class='col-10 p-5'>
-            <div id='current-day' class='row'>
-                <h3 id='cityHeading'>Toronto <span class='fs-5'>September 31, 2021</span></h3>
-                <p id='currentTemp'>Temp: 15 deg c</p>
-                <p id='curentWind'>Wind: 5km/h</p>
-                <p>Humidity: 28%</p>
-                <p>UV Index: 0.32</p>
+            <div id='current-day' class='current-day row hide'>
+                <h3 id='city-heading'><span id='current-city'></span> <span id='todays-date' class='fs-5'></span><span><img id='current-icon' class='weather-icon' src=''></span></h3>
+                <p>Temp: <span id='current-temp'></span></p>
+                <p>Wind: <span id='current-wind'></span></p>
+                <p>Humidity: <span  id='current-hum'></span></p>
+                <p>UV Index: <span id='current-uv'></span></p>
             </div>
 
-            <div id='five-day-forecast' class='pt-5'>
+            <div id='five-day-forecast' class='five-day-forecast pt-5 hide'>
                 <h3 class='mb-4'>5-Day Forecast:</h3>
                 <div class='five-day-card'>
-                    <h5 class='5-day-date'>Monday</h5>
-                    <p class='5-day-info'>Temp: 15 deg c</p>
-                    <p class='5-day-info'>Wind: 7km/h</p>
-                    <p class='5-day-info'>Humidity: 19%</p>
+                    <h5><span id='day-1-date'></span><span><img id='day-1-icon' class='weather-icon' src=''></span></h5>
+                    <p class='5-day-info'>High Temp: <span id='day-1-Htemp'></span></p>
+                    <p class='5-day-info'>Low Temp: <span id='day-1-Ltemp'></span></p>
+                    <p class='5-day-info'>Wind: <span id='day-1-wind'></span></p>
+                    <p class='5-day-info'>Humidity: <span id='day-1-hum'></span></p>
                 </div>
                 <div class='five-day-card'>
-                    <h5 class='5-day-date'>Monday</h5>
-                    <p class='5-day-info'>Temp: 15 deg c</p>
-                    <p class='5-day-info'>Wind: 7km/h</p>
-                    <p class='5-day-info'>Humidity: 19%</p>
+                    <h5><span id='day-2-date'></span><span><img id='day-2-icon' class='weather-icon' src=''></span></h5>
+                    <p class='5-day-info'>High Temp: <span id='day-2-Htemp'></span></p>
+                    <p class='5-day-info'>Low Temp: <span id='day-2-Ltemp'></span></p>
+                    <p class='5-day-info'>Wind: <span id='day-2-wind'></span></p>
+                    <p class='5-day-info'>Humidity: <span id='day-2-hum'></span></p>
                 </div>
                 <div class='five-day-card'>
-                    <h5 class='5-day-date'>Monday</h5>
-                    <p class='5-day-info'>Temp: 15 deg c</p>
-                    <p class='5-day-info'>Wind: 7km/h</p>
-                    <p class='5-day-info'>Humidity: 19%</p>
+                    <h5><span id='day-3-date'></span><span><img id='day-3-icon' class='weather-icon' src=''></span></h5>
+                    <p class='5-day-info'>High Temp: <span id='day-3-Htemp'></span></p>
+                    <p class='5-day-info'>Low Temp: <span id='day-3-Ltemp'></span></p>
+                    <p class='5-day-info'>Wind: <span id='day-3-wind'></span></p>
+                    <p class='5-day-info'>Humidity: <span id='day-3-hum'></span></p>
                 </div>
                 <div class='five-day-card'>
-                    <h5 class='5-day-date'>Monday</h5>
-                    <p class='5-day-info'>Temp: 15 deg c</p>
-                    <p class='5-day-info'>Wind: 7km/h</p>
-                    <p class='5-day-info'>Humidity: 19%</p>
+                    <h5><span id='day-4-date'></span><span><img id='day-4-icon' class='weather-icon' src=''></span></h5>
+                    <p class='5-day-info'>High Temp: <span id='day-4-Htemp'></span></p>
+                    <p class='5-day-info'>Low Temp: <span id='day-4-Ltemp'></span></p>
+                    <p class='5-day-info'>Wind: <span id='day-4-wind'></span></p>
+                    <p class='5-day-info'>Humidity: <span id='day-4-hum'></span></p>
                 </div>
                 <div class='five-day-card'>
-                    <h5 class='5-day-date'>Monday</h5>
-                    <p class='5-day-info'>Temp: 15 deg c</p>
-                    <p class='5-day-info'>Wind: 7km/h</p>
-                    <p class='5-day-info'>Humidity: 19%</p>
+                    <h5><span id='day-5-date'></span><span><img id='day-5-icon' class='weather-icon' src=''></span></h5>
+                    <p class='5-day-info'>High Temp: <span id='day-5-Htemp'></span></p>
+                    <p class='5-day-info'>Low Temp: <span id='day-5-Ltemp'></span></p>
+                    <p class='5-day-info'>Wind: <span id='day-5-wind'></span></p>
+                    <p class='5-day-info'>Humidity: <span id='day-5-hum'></span></p>
                 </div>
+            </div>
+
+            <div class='error-message-container hide'>
+                <h3>There was an error in searching for the city name you provided</h3>
+                <h4>Please check your spelling and try again</h4>
+            </div>
+
+            <div id='enter-city-prompt' class='enter-city-prompt'>
+                <h3>Please search for a city to see its forecast</h3>
             </div>
         </div>
     </main>
@@ -84,6 +94,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js" integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='./script.js'></script>
 </body>
 
