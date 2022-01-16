@@ -16,14 +16,12 @@ let recentContainer = document.getElementById('recent-searches-container');
 
 
 const getLatLong = (city) => {
-    let apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=AIzaSyDDAXgOW2qEDtuDWpaGlkmhXq-NE1eup58`;
+    let apiUrl = `https://app.geocodeapi.io/api/v1/search?apikey=3b2d91c0-7645-11ec-8091-4932426dad0b&text=${city}`;
 
     fetch(apiUrl).then(response => {
         if (response.ok) {
             response.json().then(data => {
-                let longLat = data.results[0].geometry.location;
-                let long = longLat.lng;
-                let lat = longLat.lat; 
+                const [long, lat] = data.features[0].geometry.coordinates
                 let recentObj = {
                     lat,
                     long, 
@@ -33,10 +31,8 @@ const getLatLong = (city) => {
                 createRecentButton(recentObj);
                 getWeather(lat, long, city);
             })
-        } else {
-            console.log('error');
         }
-    })
+    }).catch(err => console.log(err))
 }
 
 const getWeather = (lat, long, city) => {
